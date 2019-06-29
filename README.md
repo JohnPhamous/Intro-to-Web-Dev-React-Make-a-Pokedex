@@ -42,3 +42,10 @@ The participant will leave the workshop having:
 ## Delivery Medium
 
 This workshop is intended to be taught through a mix of ad-hoc programming on a computer and drawing on a whiteboard.
+
+## How to develop locally
+
+1. `git clone https://github.com/JohnPhamous/react-pokeapi-tutorial.git`
+1. `cd react-pokeapi-tutorial`
+1. `npm install`
+1. `npm run start`
