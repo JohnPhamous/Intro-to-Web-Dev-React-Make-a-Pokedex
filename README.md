@@ -2,6 +2,10 @@
 
 > Created by John Pham ([john@pham.codes](mailto:john@pham.codes))
 
+## Demo
+
+You can preview what the particpants will build [here](https://upbeat-wozniak-d5421d.netlify.com/).
+
 ## Participant Persona
 
 - Has taken an introductory computer science course in any language
@@ -42,10 +46,3 @@ The participant will leave the workshop having:
 ## Delivery Medium
 
 This workshop is intended to be taught through a mix of ad-hoc programming on a computer and drawing on a whiteboard.
-
-## How to develop locally
-
-1. `git clone https://github.com/JohnPhamous/react-pokeapi-tutorial.git`
-1. `cd react-pokeapi-tutorial`
-1. `npm install`
-1. `npm run start`
