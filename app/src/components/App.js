@@ -6,7 +6,8 @@ export default class App extends Component {
 
   state = {
     allPokemon: [],
-    selectedPokemon: undefined
+    selectedPokemon: undefined,
+    selectedPokemonGif: undefined
   };
 
   async componentDidMount() {
@@ -42,11 +43,21 @@ export default class App extends Component {
     const data = await fetch(url);
     const json = await data.json();
 
-    this.setState({ selectedPokemon: json });
+    const GIPHY_API_KEY = "A3CQtr8DQVI2kM215yBVSwvdwvJgyMcU";
+    const GIPHY_API = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=`;
+
+    const name = json["name"];
+
+    const giphyData = await fetch(`${GIPHY_API}${name}`);
+    const giphyJson = await giphyData.json();
+    const selectedPokemonGif =
+      giphyJson["data"][0]["images"]["original"]["url"];
+
+    this.setState({ selectedPokemon: json, selectedPokemonGif });
   }
 
   render() {
-    const { allPokemon, selectedPokemon } = this.state;
+    const { allPokemon, selectedPokemon, selectedPokemonGif } = this.state;
 
     return (
       <main id="pokedex-container">
@@ -58,6 +69,10 @@ export default class App extends Component {
               <hr />
 
               <h2 className="pokemon-name">{selectedPokemon.name}</h2>
+              <img
+                src={selectedPokemonGif}
+                alt={`${selectedPokemon.name} gif`}
+              />
 
               <table className="stats-table">
                 <tbody>
