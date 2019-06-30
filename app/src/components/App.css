@@ -19,3 +19,20 @@
   text-transform: capitalize;
   margin: 0;
 }
+
+.stats-table {
+  margin: 0 auto;
+}
+
+.type {
+  background: #c48bff;
+  padding: 6px;
+  margin: 0 4px;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 6px;
+}
+
+td {
+  padding: 6px;
+}
