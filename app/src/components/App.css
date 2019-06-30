@@ -1,0 +1,21 @@
+#pokedex-container {
+  text-align: center;
+}
+
+#pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pokemon-entry {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+  margin: 0;
+}
